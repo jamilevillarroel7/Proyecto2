@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "453599144894",
+    "firebase_url": "https://eventos-2071f.firebaseio.com",
+    "project_id": "eventos-2071f",
+    "storage_bucket": "eventos-2071f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453599144894:android:4e316c812dee7ac1",
+        "android_client_info": {
+          "package_name": "com.example.viict.eventsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453599144894-bg9g6k0qnpru46mj6183kcmel9gldb2t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.viict.eventsapp",
+            "certificate_hash": "2a22d711c3ef9b93750349b6bb77c26e301c562f"
+          }
+        },
+        {
+          "client_id": "453599144894-9rasms8di1qpkbjjjg44jt1j8uf4igg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfckJoRacuApszgltQwdo4ChHpivbDkCE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453599144894-9rasms8di1qpkbjjjg44jt1j8uf4igg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
