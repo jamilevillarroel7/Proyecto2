@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "453599144894-ootbhksbcgqa01a1qnj17c4807ob8lft.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.viict.eventsapp",
+            "certificate_hash": "7dffaa253cb12c420d1907fff2299dc05b33383a"
+          }
+        },
+        {
           "client_id": "453599144894-bg9g6k0qnpru46mj6183kcmel9gldb2t.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
