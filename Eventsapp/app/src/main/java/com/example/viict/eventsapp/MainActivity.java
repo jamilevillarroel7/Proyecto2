@@ -10,8 +10,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-/*import com.facebook.AccessToken;
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -19,7 +18,7 @@ import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 
 import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;*/
+import com.facebook.login.widget.LoginButton;
 
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -39,31 +38,31 @@ public class MainActivity extends AppCompatActivity {
     //INTERFAZ
     private EditText emailField, passwordField;
     private Button btnLogin;
-    //private LoginButton lbFacebook;
+    private LoginButton lbFacebook;
 
-   //FIREBASE
+    //FIREBASE
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     //FACEBOOK
-    //private CallbackManager mCallbackManager;
+    private CallbackManager mCallbackManager;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //FacebookSdk.sdkInitialize(getApplicationContext());
+        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
 
         //CONEXION ENTRE INTERFAZ Y VARIABLES
         emailField = (EditText) findViewById(R.id.email);
         passwordField = (EditText) findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.login);
-        //lbFacebook = (LoginButton) findViewById(R.id.login_button);
+        lbFacebook = (LoginButton) findViewById(R.id.login_button);
 
         //INSTANCIA LA CONEXION CON FIREBASE
         mAuth = FirebaseAuth.getInstance();
 
         //INSTANCIA LA CONEXION A FACEBOOK
-        //mCallbackManager = CallbackManager.Factory.create();
+        mCallbackManager = CallbackManager.Factory.create();
 
 
         //ACCESO A LA SEGUNDA PANTALLA
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*//FACEBOOK
+        //FACEBOOK
         lbFacebook.setReadPermissions("email", "public_profile");
 
         lbFacebook.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
@@ -92,31 +91,34 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG, "facebook:onSuccess:" + loginResult);
                 handleFacebookAccessToken(loginResult.getAccessToken());
+                startActivity(new Intent(MainActivity.this, SegundaActivity.class));
             }
 
             @Override
             public void onCancel() {
-                Log.d(TAG, "facebook:onCancel");
+                Toast.makeText(getApplicationContext(),R.string.cancel_login,Toast.LENGTH_SHORT).show();
+                //Log.d(TAG, "facebook:onCancel");
                 // ...
             }
 
             @Override
             public void onError(FacebookException error) {
-                Log.d(TAG, "facebook:onError", error);
+                Toast.makeText(getApplicationContext(),R.string.error_login,Toast.LENGTH_SHORT).show();
+                //Log.d(TAG, "facebook:onError", error);
                 // ...
             }
-        });*/
+        });
     }
 
-   /* @Override
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         // Pass the activity result back to the Facebook SDK
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
-    }*/
+    }
 
 
-    /*private void handleFacebookAccessToken(AccessToken token) {
+    private void handleFacebookAccessToken(AccessToken token) {
         Log.d(TAG, "handleFacebookAccessToken:" + token);
 
         AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
@@ -138,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                         // ...
                     }
                 });
-    }*/
+    }
 
 
 
