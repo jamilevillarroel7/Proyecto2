@@ -21,6 +21,12 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -32,13 +38,14 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG ="";
 
     //INTERFAZ
     private EditText emailField, passwordField;
     private Button btnLogin;
     private LoginButton lbFacebook;
+    private SignInButton signInButton;
 
     //FIREBASE
     private FirebaseAuth mAuth;
@@ -46,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
     //FACEBOOK
     private CallbackManager mCallbackManager;
+
+    //GOOGLE
+    private GoogleApiClient googleApiClient;
+    public static final int SIGN_IN_CODE=777;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,12 +68,24 @@ public class MainActivity extends AppCompatActivity {
         passwordField = (EditText) findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.login);
         lbFacebook = (LoginButton) findViewById(R.id.login_button);
+        signInButton = (SignInButton) findViewById(R.id.signInButton);
 
         //INSTANCIA LA CONEXION CON FIREBASE
         mAuth = FirebaseAuth.getInstance();
 
         //INSTANCIA LA CONEXION A FACEBOOK
         mCallbackManager = CallbackManager.Factory.create();
+
+        //GOOGLE
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+
+        googleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this, this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .build();
 
 
         //ACCESO A LA SEGUNDA PANTALLA
@@ -80,6 +103,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 LogearUsuario();
+            }
+        });
+
+        //Accion del boton google
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+                startActivityForResult(intent, SIGN_IN_CODE);
             }
         });
 
@@ -115,6 +147,23 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         // Pass the activity result back to the Facebook SDK
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
+
+        //google
+        if(requestCode == SIGN_IN_CODE){
+            GoogleSignInResult  result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleSignInResult(result);
+
+        }
+    }
+    //gOOGLE
+    private void handleSignInResult(GoogleSignInResult result) {
+        if(result.isSuccess()){
+
+            startActivity(new Intent(MainActivity.this, SegundaActivity.class));
+
+        }else{
+            Toast.makeText(this, "Error",Toast.LENGTH_SHORT).show();
+        }
     }
 
 
@@ -168,5 +217,12 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
     }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
+
+
 
 }

@@ -3,4 +3,5 @@
     <string name="error_login">Ocurrio un Error</string>
     <string name="cancel_login">Cancelado</string>
     <string name="facebook.app.id">389258941541659</string>
+    <string name="not_close_session">no se cerro sesion</string>
 </resources>
