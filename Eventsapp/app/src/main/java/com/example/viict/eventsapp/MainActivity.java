@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private LoginButton lbFacebook;
     private SignInButton signInButton;
     private TextView nuevoUsr;
+    private TextView olvidePass;
 
     //FIREBASE
     private FirebaseAuth mAuth;
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         lbFacebook = (LoginButton) findViewById(R.id.login_button);
         signInButton = (SignInButton) findViewById(R.id.signInButton);
         nuevoUsr= (TextView) findViewById(R.id.nuevoUsr);
+        olvidePass = (TextView) findViewById(R.id.recuperarPass) ;
 
 
         //INSTANCIA LA CONEXION CON FIREBASE
@@ -97,11 +99,20 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 }
             }
         };
+
+        //Olvide contraseña
+        nuevoUsr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            Intent intent= new Intent(MainActivity.this,);
+            }
+        });
+
         //Create cuenta por formulario
         nuevoUsr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, TerceraActivity.class));
+                startActivity(new Intent(MainActivity.this, FormularioActivity.class));
             }
         });
         //ACCIÓN DE CLICK AL BOTON INGRESAR

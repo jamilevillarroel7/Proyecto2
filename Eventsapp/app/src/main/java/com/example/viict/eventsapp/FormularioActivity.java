@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class TerceraActivity extends AppCompatActivity {
+public class FormularioActivity extends AppCompatActivity {
     private EditText nombres;
     private EditText apellidos;
     private EditText fechaNac;
@@ -18,8 +18,9 @@ public class TerceraActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tercera);
+        setContentView(R.layout.activity_formulario);
         nombres= (EditText) findViewById(R.id.nombres);
         apellidos= (EditText) findViewById(R.id.apellidos);
         fechaNac= (EditText) findViewById(R.id.fechaNac);
@@ -27,18 +28,21 @@ public class TerceraActivity extends AppCompatActivity {
         password= (EditText) findViewById(R.id.password);
         registar= (Button) findViewById(R.id.registrar);
         volver = (Button) findViewById(R.id.volver);
-        
+
         registar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TerceraActivity.this, SegundaActivity.class));
+                startActivity(new Intent(FormularioActivity.this, SegundaActivity.class));
             }
         });
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TerceraActivity.this, MainActivity.class));
+                startActivity(new Intent(FormularioActivity.this, MainActivity.class));
             }
         });
+
+
+
     }
 }
