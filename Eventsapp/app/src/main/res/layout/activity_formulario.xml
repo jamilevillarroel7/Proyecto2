@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FormularioActivity"
-    android:background="@drawable/backgroundRegistro">
+    android:background="@drawable/backgroundregistro">
 
     <EditText
         android:id="@+id/password"
@@ -16,7 +16,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="252dp"
         android:hint="Contraseña"
-        androind:background="@drawable/background"
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         app:layout_constraintBottom_toTopOf="@+id/volver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -34,6 +35,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="180dp"
         android:hint="Correo Electronico"
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         app:layout_constraintBottom_toTopOf="@+id/registrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -51,6 +54,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="120dp"
         android:hint="Fecha de Nacimiento "
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -67,6 +72,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
         android:hint="Apellidos"
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         app:layout_constraintBottom_toTopOf="@+id/fechaNac"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -83,6 +90,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:hint="Nombres"
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         app:layout_constraintBottom_toTopOf="@+id/apellidos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -100,6 +109,7 @@
         android:layout_marginTop="8dp"
         android:text="Events"
         android:textSize="30sp"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
