@@ -1,4 +1,4 @@
-package com.example.viict.eventsapp;
+package com.example.viict.eventsapp.Cliente;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class FormularioActivity extends AppCompatActivity {
+import com.example.viict.eventsapp.R;
+
+public class CL02FormularioActivity extends AppCompatActivity {
     private EditText nombres;
     private EditText apellidos;
     private EditText fechaNac;
@@ -23,7 +25,7 @@ public class FormularioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_formulario);
+        setContentView(R.layout.activity_cl02_formulario);
         nombres= (EditText) findViewById(R.id.nombres);
         apellidos= (EditText) findViewById(R.id.apellidos);
         fechaNac= (EditText) findViewById(R.id.fechaNac);
@@ -40,13 +42,13 @@ public class FormularioActivity extends AppCompatActivity {
         registar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(FormularioActivity.this, SegundaActivity.class));
+                startActivity(new Intent(CL02FormularioActivity.this, CL04PrincipalClienteActivity.class));
             }
         });
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(FormularioActivity.this, MainActivity.class));
+                startActivity(new Intent(CL02FormularioActivity.this, CL01LoginActivity.class));
             }
         });
 

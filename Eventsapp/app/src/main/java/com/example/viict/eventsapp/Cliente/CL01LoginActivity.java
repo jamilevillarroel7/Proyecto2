@@ -1,4 +1,4 @@
-package com.example.viict.eventsapp;
+package com.example.viict.eventsapp.Cliente;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.viict.eventsapp.R;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -36,9 +38,7 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.w3c.dom.Text;
-
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+public class CL01LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG ="";
 
     //INTERFAZ
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_cl01_login);
 
         //CONEXION ENTRE INTERFAZ Y VARIABLES
         emailField = (EditText) findViewById(R.id.email);
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser()!= null){
-                    startActivity(new Intent(MainActivity.this, SegundaActivity.class));
+                    startActivity(new Intent(CL01LoginActivity.this, CL04PrincipalClienteActivity.class));
                 }
             }
         };
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         recuperarPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(MainActivity.this,RecuperarActivity.class);
+                Intent intent= new Intent(CL01LoginActivity.this,CL03RecuperarPasswordActivity.class);
                 startActivity(intent);
             }
         });
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, FormularioActivity.class));
+                startActivity(new Intent(CL01LoginActivity.this, CL02FormularioActivity.class));
             }
         });
         //ACCIÓN DE CLICK AL BOTON INGRESAR
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG, "facebook:onSuccess:" + loginResult);
                 handleFacebookAccessToken(loginResult.getAccessToken());
-                startActivity(new Intent(MainActivity.this, SegundaActivity.class));
+                startActivity(new Intent(CL01LoginActivity.this, CL04PrincipalClienteActivity.class));
             }
 
             @Override
@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private void handleSignInResult(GoogleSignInResult result) {
         if(result.isSuccess()){
 
-            startActivity(new Intent(MainActivity.this, SegundaActivity.class));
+            startActivity(new Intent(CL01LoginActivity.this, CL04PrincipalClienteActivity.class));
 
         }else{
             Toast.makeText(this, "Error",Toast.LENGTH_SHORT).show();
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Usuario no registrado en el sistema",
+                            Toast.makeText(CL01LoginActivity.this, "Usuario no registrado en el sistema",
                                     Toast.LENGTH_SHORT).show();
                         }
 
@@ -230,13 +230,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(emailField.getText().toString().length()==0 && passwordField.getText().toString().length()==0){
-                            Toast.makeText(MainActivity.this, "Los campos estan vacios", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CL01LoginActivity.this, "Los campos estan vacios", Toast.LENGTH_SHORT).show();
                         }else{
                             if (task.isSuccessful()) {
                                 Log.d(TAG, "Bievenido a EventsApp" + task.isSuccessful()+"\nDisfrutalo!");
                             }else{
                                 Log.w(TAG, "signInWithEmail:failure", task.getException());
-                                Toast.makeText(MainActivity.this, "Usuario no registrado en el sistema, \nVuelve a intentarlo!",
+                                Toast.makeText(CL01LoginActivity.this, "Usuario no registrado en el sistema, \nVuelve a intentarlo!",
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
@@ -271,7 +271,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Authentication failed.",
+                            Toast.makeText(CL01LoginActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         }
 

@@ -4,4 +4,11 @@
     <string name="cancel_login">Cancelado</string>
     <string name="facebook.app.id">389258941541659</string>
     <string name="not_close_session">no se cerro sesion</string>
+    <string name="title_activity_menu_organizacion">MenuOrganizacion</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>

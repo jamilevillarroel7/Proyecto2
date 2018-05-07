@@ -1,4 +1,4 @@
-package com.example.viict.eventsapp;
+package com.example.viict.eventsapp.Cliente;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -8,16 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.viict.eventsapp.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResolvingResultCallbacks;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SegundaActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+public class CL04PrincipalClienteActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
     private Button logoutBtn;
     private GoogleApiClient googleApiClient;
@@ -25,7 +25,7 @@ public class SegundaActivity extends AppCompatActivity implements GoogleApiClien
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_segunda);
+        setContentView(R.layout.activity_cl04_principal_cliente);
 
         logoutBtn = (Button) findViewById(R.id.logout);
 
@@ -47,7 +47,7 @@ public class SegundaActivity extends AppCompatActivity implements GoogleApiClien
                     @Override
                     public void onResult(@NonNull Status status) {
                         if(status.isSuccess()){
-                            startActivity(new Intent(SegundaActivity.this, MainActivity.class));
+                            startActivity(new Intent(CL04PrincipalClienteActivity.this, CL01LoginActivity.class));
                         }else{
                             Toast.makeText(getApplicationContext(),R.string.not_close_session, Toast.LENGTH_SHORT).show();
                         }
@@ -55,7 +55,7 @@ public class SegundaActivity extends AppCompatActivity implements GoogleApiClien
                 });
 
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(SegundaActivity.this, MainActivity.class));
+                startActivity(new Intent(CL04PrincipalClienteActivity.this, CL01LoginActivity.class));
 
 
             }
