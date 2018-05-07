@@ -25,7 +25,7 @@
             android:value="facebook_app_id" />
 
         <activity android:name=".FormularioActivity" />
-        <activity android:name=".RecuperarActivity"></activity>
+        <activity android:name=".RecuperarActivity" />
     </application>
 
 </manifest>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FormularioActivity">
+    tools:context=".FormularioActivity"
+    android:background="@drawable/backgroundRegistro">
 
     <EditText
         android:id="@+id/password"
@@ -15,6 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="252dp"
         android:hint="Contraseña"
+        androind:background="@drawable/background"
         app:layout_constraintBottom_toTopOf="@+id/volver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"

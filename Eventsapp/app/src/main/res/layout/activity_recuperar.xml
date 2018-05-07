@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".RecuperarActivity">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:id="@+id/btnRecuperar"
+        android:text="Recuperar Contraseña"
+        android:background="@drawable/borde2"
+
+        />
+
 </android.support.constraint.ConstraintLayout>

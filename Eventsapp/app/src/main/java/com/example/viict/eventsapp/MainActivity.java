@@ -1,6 +1,7 @@
 package com.example.viict.eventsapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,16 +36,19 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     private static final String TAG ="";
 
     //INTERFAZ
+    private TextView txvWelcome1;
     private EditText emailField, passwordField;
     private Button btnLogin;
     private LoginButton lbFacebook;
     private SignInButton signInButton;
     private TextView nuevoUsr;
-    private TextView olvidePass;
+    private Button recuperarPass, btnRegistrar;
 
     //FIREBASE
     private FirebaseAuth mAuth;
@@ -68,8 +72,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         btnLogin = (Button) findViewById(R.id.login);
         lbFacebook = (LoginButton) findViewById(R.id.login_button);
         signInButton = (SignInButton) findViewById(R.id.signInButton);
-        nuevoUsr= (TextView) findViewById(R.id.nuevoUsr);
-        olvidePass = (TextView) findViewById(R.id.recuperarPass) ;
+        recuperarPass = (Button) findViewById(R.id.recuperarPass) ;
+        txvWelcome1 = (TextView) findViewById(R.id.txvWelcome1);
+        btnRegistrar = (Button) findViewById(R.id.btnRegistrar);
+
+        Typeface fuente = Typeface.createFromAsset(getAssets(),"fonts/Magettas Regular.otf");
+        txvWelcome1.setTypeface(fuente);
 
 
         //INSTANCIA LA CONEXION CON FIREBASE
@@ -101,15 +109,16 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         };
 
         //Olvide contraseña
-        nuevoUsr.setOnClickListener(new View.OnClickListener() {
+        recuperarPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            Intent intent= new Intent(MainActivity.this,);
+                Intent intent= new Intent(MainActivity.this,RecuperarActivity.class);
+                startActivity(intent);
             }
         });
 
         //Create cuenta por formulario
-        nuevoUsr.setOnClickListener(new View.OnClickListener() {
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, FormularioActivity.class));
@@ -157,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 // ...
             }
         });
+
     }
 
     @Override
@@ -194,12 +204,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithCredential:success");
+                            Log.d(TAG, "Bienvenido a la Aplicación EventsAPP");
                             FirebaseUser user = mAuth.getCurrentUser();
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Authentication failed.",
+                            Toast.makeText(MainActivity.this, "Usuario no registrado en el sistema",
                                     Toast.LENGTH_SHORT).show();
                         }
 
@@ -219,13 +229,18 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Log.d(TAG, "signInWithEmail:success:" + task.isSuccessful());
+                        if(emailField.getText().toString().length()==0 && passwordField.getText().toString().length()==0){
+                            Toast.makeText(MainActivity.this, "Los campos estan vacios", Toast.LENGTH_SHORT).show();
                         }else{
-                            Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            if (task.isSuccessful()) {
+                                Log.d(TAG, "Bievenido a EventsApp" + task.isSuccessful()+"\nDisfrutalo!");
+                            }else{
+                                Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                Toast.makeText(MainActivity.this, "Usuario no registrado en el sistema, \nVuelve a intentarlo!",
+                                        Toast.LENGTH_SHORT).show();
+                            }
                         }
+
                     }
                 });
     }
