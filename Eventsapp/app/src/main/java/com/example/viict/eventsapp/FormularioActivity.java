@@ -1,11 +1,13 @@
 package com.example.viict.eventsapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class FormularioActivity extends AppCompatActivity {
     private EditText nombres;
@@ -15,6 +17,7 @@ public class FormularioActivity extends AppCompatActivity {
     private EditText password;
     private Button registar;
     private Button volver;
+    private TextView events1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +31,11 @@ public class FormularioActivity extends AppCompatActivity {
         password= (EditText) findViewById(R.id.password);
         registar= (Button) findViewById(R.id.registrar);
         volver = (Button) findViewById(R.id.volver);
+        events1 = (TextView) findViewById(R.id.events1);
+
+        Typeface fuente = Typeface.createFromAsset(getAssets(),"fonts/Magettas Regular.otf");
+        events1.setTypeface(fuente);
+
 
         registar.setOnClickListener(new View.OnClickListener() {
             @Override
