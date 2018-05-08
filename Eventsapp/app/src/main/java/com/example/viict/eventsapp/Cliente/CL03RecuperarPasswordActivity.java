@@ -1,5 +1,6 @@
 package com.example.viict.eventsapp.Cliente;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,19 +11,37 @@ import com.example.viict.eventsapp.R;
 
 public class CL03RecuperarPasswordActivity extends AppCompatActivity {
 
-    private Button btnRecuperar;
+    private Button siguiente;
+    private Button cancelar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cl03_recuperar_password);
 
-        btnRecuperar = (Button)findViewById(R.id.btnRecuperar);
+        siguiente = (Button) findViewById(R.id.siguiente);
+        cancelar = (Button) findViewById(R.id.cancelar);
+
+        siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CL03RecuperarPasswordActivity.this, CL031RecuperarPasswordActivity.class));
+            }
+        });
+
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CL03RecuperarPasswordActivity.this, CL01LoginActivity.class));
+            }
+        });
+
+        /*btnRecuperar = (Button)findViewById(R.id.btnRecuperar);
         btnRecuperar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(CL03RecuperarPasswordActivity.this,"Su Contraseña es 123",Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
     }
 }

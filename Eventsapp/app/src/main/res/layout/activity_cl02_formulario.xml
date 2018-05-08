@@ -8,7 +8,26 @@
     android:background="@drawable/backgroundregistro">
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/segundaContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/borde"
+        android:hint="Confirmar Contraseña"
+        android:padding="5dp"
+        android:textColorHint="@color/md_white_1000"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/volver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primeraContraseña"
+        app:layout_constraintVertical_bias="0.044"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/primeraContraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -96,7 +115,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Events"
+        android:text="EventsApp"
         android:textColor="@color/md_white_1000"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"

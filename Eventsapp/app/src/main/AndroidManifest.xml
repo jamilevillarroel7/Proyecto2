@@ -36,6 +36,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.viict.eventsapp.Organizacion.ORG01ListaEventos" />
         </activity>
+        <activity android:name=".Cliente.CL031RecuperarPasswordActivity" />
+        <activity android:name=".Organizacion.ORG02CrearEventosActivity"></activity>
     </application>
 
 </manifest>
