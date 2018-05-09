@@ -37,7 +37,13 @@
                 android:value="com.example.viict.eventsapp.Organizacion.ORG01ListaEventos" />
         </activity>
         <activity android:name=".Cliente.CL031RecuperarPasswordActivity" />
-        <activity android:name=".Organizacion.ORG02CrearEventosActivity"></activity>
+        <activity android:name=".Organizacion.ORG02CrearEventosDatosActivity" />
+        <activity android:name=".Organizacion.ORGElEventoseRepite" />
+        <activity android:name=".Organizacion.ORG02CrearEventosUbicacionActivity" />
+        <activity android:name=".Organizacion.ORG02CrearEventosCrearEntradaActivity" />
+        <activity android:name=".Organizacion.ORGOpciondeMasEnEntradaActivity" />
+        <activity android:name=".Organizacion.ORG02CrearEventosFacturacionActivity" />
+        <activity android:name=".Administrador.ADM01RegistrarOrganizacionActivity"></activity>
     </application>
 
 </manifest>

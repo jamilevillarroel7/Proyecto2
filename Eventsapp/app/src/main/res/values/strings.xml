@@ -12,4 +12,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="recuperar_contrase_a">Recuperar Contraseña</string>
+    <string name="nombre_del_evento">Nombre del Evento</string>
+    <string name="crear_evento">Crear Evento</string>
+    <string name="datos_del_evento">Datos del Evento:</string>
+    <string name="descripcion_de_evento">Descripcion de Evento</string>
+    <string name="solo_mayores_de_18_a_os">Solo mayores de 18 años</string>
+    <string name="publico_en_general">Publico en General</string>
+    <string name="seleccione_una_categoria">Seleccione una Categoria:</string>
+    <string name="restricciones">Restricciones</string>
+    <string name="menores_de_edad_acompa_ados_con_adulto">Menores de edad,acompañados con adulto</string>
+    <string name="ingrese_contrase_a_nueva">Ingrese contraseña nueva</string>
 </resources>

@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.example.viict.eventsapp.R;
 
-public class ORG02CrearEventosActivity extends AppCompatActivity {
+public class ORG02CrearEventosFacturacionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_org02_crear_eventos);
+        setContentView(R.layout.activity_org02_crear_eventos_facturacion);
     }
 }

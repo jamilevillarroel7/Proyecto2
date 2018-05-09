@@ -67,7 +67,7 @@ public class CL01LoginActivity extends AppCompatActivity implements GoogleApiCli
         setContentView(R.layout.activity_cl01_login);
 
         //CONEXION ENTRE INTERFAZ Y VARIABLES
-        emailField = (EditText) findViewById(R.id.email);
+        emailField = (EditText) findViewById(R.id.direccion);
         passwordField = (EditText) findViewById(R.id.password2);
         btnLogin = (Button) findViewById(R.id.login);
         lbFacebook = (LoginButton) findViewById(R.id.login_button);

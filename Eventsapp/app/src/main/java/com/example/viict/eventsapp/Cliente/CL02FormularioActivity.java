@@ -15,6 +15,7 @@ import com.example.viict.eventsapp.R;
 
 public class CL02FormularioActivity extends AppCompatActivity {
 
+    private static final String TAG = "";
     private EditText nombres;
     private EditText apellidos;
     private EditText fechaNac;
@@ -33,7 +34,7 @@ public class CL02FormularioActivity extends AppCompatActivity {
         nombres= (EditText) findViewById(R.id.nombres);
         apellidos= (EditText) findViewById(R.id.apellidos);
         fechaNac= (EditText) findViewById(R.id.fechaNac);
-        email= (EditText) findViewById(R.id.email);
+        email= (EditText) findViewById(R.id.direccion);
         primeraContraseña= (EditText) findViewById(R.id.primeraContraseña);
         segundaContraseña= (EditText) findViewById(R.id.segundaContraseña);
         registar= (Button) findViewById(R.id.registrar);
@@ -92,9 +93,11 @@ public class CL02FormularioActivity extends AppCompatActivity {
                     Toast.makeText(CL02FormularioActivity.this, "Contraseñas no coinciden", Toast.LENGTH_SHORT).show();
                 }
 
-                
+
 
             }
+
+
         });
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,8 +105,6 @@ public class CL02FormularioActivity extends AppCompatActivity {
                 startActivity(new Intent(CL02FormularioActivity.this, CL01LoginActivity.class));
             }
         });
-
-
 
     }
 }

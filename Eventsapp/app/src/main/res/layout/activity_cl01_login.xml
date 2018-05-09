@@ -15,14 +15,15 @@
         android:textColor="@android:color/white"
         android:textSize="40dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/direccion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83" />
+        app:layout_constraintVertical_bias="0.146" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/direccion"
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_marginBottom="8dp"
@@ -133,6 +134,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/organizadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Eres una institucion?"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="102dp" />
 
 
 </android.support.constraint.ConstraintLayout>
