@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cliente.CL04PrincipalClienteActivity">
+    tools:context=".Cliente.CL04PrincipalClienteActivity"
+    android:background="@drawable/fondo3">
     <TextView
+        android:textColor="@color/md_white_1000"
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="67dp"
@@ -22,6 +24,8 @@
         app:layout_constraintVertical_bias="0.34" />
 
     <Button
+        android:background="@drawable/borde"
+        android:textColor="@color/md_white_1000"
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo3"
     tools:context=".Organizacion.ORG02CrearEventosDatosActivity">
 
     <Spinner
+
         android:id="@+id/categoria"
         android:layout_width="140dp"
         android:layout_height="24dp"
@@ -19,6 +21,8 @@
     </Spinner>
 
     <EditText
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         android:id="@+id/nombreEvento"
         android:layout_width="195dp"
         android:layout_height="37dp"
@@ -31,6 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/subTituloDatosEvento" />
 
     <TextView
+        android:textColor="@color/md_white_1000"
         android:id="@+id/tituloCrearEvento"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
@@ -38,12 +43,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Crear Evento"
+        android:textAllCaps="false"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:textColor="@color/md_white_1000"
         android:id="@+id/subTituloDatosEvento"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
@@ -57,6 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tituloCrearEvento" />
 
     <TextView
+        android:textColor="@color/md_white_1000"
         android:id="@+id/subTituloCategoria"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
@@ -67,6 +76,8 @@
         app:layout_constraintTop_toBottomOf="@+id/nombreEvento" />
 
     <EditText
+        android:background="@drawable/borde"
+        android:textColor="@color/md_white_1000"
         android:id="@+id/descripcionEvento"
         android:layout_width="161dp"
         android:layout_height="126dp"
@@ -84,6 +95,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:text="@string/descripcion_de_evento"
+        android:textColor="@color/md_white_1000"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/categoria" />
 
@@ -94,6 +107,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/restricciones"
+        android:textColor="@color/md_white_1000"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descripcionEvento" />
 
@@ -103,7 +118,9 @@
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:buttonTint="@android:color/background_light"
         android:text="@string/menores_de_edad_acompa_ados_con_adulto"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/opccion1" />
 
@@ -113,7 +130,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:buttonTint="@android:color/background_light"
         android:text="@string/solo_mayores_de_18_a_os"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/opccion2" />
 
@@ -123,7 +142,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:buttonTint="@android:color/background_light"
         android:text="@string/publico_en_general"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subTituloRestricciones" />
 
@@ -134,16 +155,20 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
         android:text="Imagen"
+        android:textColor="@color/md_white_1000"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/nombreEvento"
         app:layout_constraintTop_toBottomOf="@+id/tituloCrearEvento" />
 
     <Button
         android:id="@+id/cargar"
-        android:layout_width="80dp"
+        android:layout_width="113dp"
         android:layout_height="35dp"
         android:layout_marginEnd="4dp"
         android:layout_marginTop="12dp"
+        android:background="@drawable/borde"
         android:text="Cargar"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagen" />
 
@@ -164,10 +189,14 @@
         android:layout_marginEnd="36dp"
         android:layout_marginTop="8dp"
         android:text="Fecha y hora de inicio"
+        android:textColor="@color/md_white_1000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cargar" />
 
     <EditText
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         android:id="@+id/horaInicio"
         android:layout_width="71dp"
         android:layout_height="25dp"
@@ -181,6 +210,8 @@
         app:layout_constraintTop_toBottomOf="@+id/subTituloFechyHoraInicio" />
 
     <EditText
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         android:id="@+id/fechaInicio"
         android:layout_width="75dp"
         android:layout_height="23dp"
@@ -197,11 +228,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Fecha y hora de fin"
+        android:textColor="@color/md_white_1000"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/fechaInicio"
-        tools:layout_editor_absoluteX="211dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="211dp" />
 
     <EditText
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         android:id="@+id/fechaFin"
         android:layout_width="73dp"
         android:layout_height="19dp"
@@ -213,6 +248,8 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         android:id="@+id/horaFin"
         android:layout_width="72dp"
         android:layout_height="18dp"
@@ -226,6 +263,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <Button
+        android:textColor="@color/md_white_1000"
+        android:background="@drawable/borde"
         android:id="@+id/eventoRepite"
         android:layout_width="145dp"
         android:layout_height="35dp"
@@ -238,25 +277,29 @@
 
     <Button
         android:id="@+id/siguiente"
-        android:layout_width="99dp"
+        android:layout_width="125dp"
         android:layout_height="36dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/borde"
         android:text="Siguiente"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventoRepite" />
 
     <Button
         android:id="@+id/cancelar"
-        android:layout_width="99dp"
-        android:layout_height="39dp"
+        android:layout_width="122dp"
+        android:layout_height="41dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/borde"
         android:text="Cancelar"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/siguiente"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.083" />
 
 </android.support.constraint.ConstraintLayout>

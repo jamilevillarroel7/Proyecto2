@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo3"
     tools:context=".Organizacion.ORG02CrearEventosUbicacionActivity">
 
     <EditText
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         android:id="@+id/referencia"
         android:layout_width="309dp"
         android:layout_height="46dp"
@@ -19,6 +22,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/direccion" />
     <EditText
+        android:background="@drawable/borde"
+        android:textColorHint="@color/md_white_1000"
         android:id="@+id/direccion"
         android:layout_width="310dp"
         android:layout_height="41dp"
@@ -32,21 +37,25 @@
         app:layout_constraintTop_toBottomOf="@+id/ciudadDi" />
 
     <Spinner
+        android:textColor="@color/md_white_1000"
         android:id="@+id/ciudadDi"
         android:layout_width="126dp"
         android:layout_height="25dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="112dp"
         tools:layout_editor_absoluteY="91dp"></Spinner>
+
     <TextView
         android:id="@+id/tituloCrearEvento"
-        android:layout_width="138dp"
+        android:layout_width="161dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Crear Evento"
+        android:textColor="@color/md_white_1000"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -58,12 +67,14 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="12dp"
         android:text="Ubicacion"
+        android:textColor="@color/md_white_1000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tituloCrearEvento" />
 
     <TextView
+        android:textColor="@color/md_white_1000"
         android:id="@+id/ciudad"
         android:layout_width="57dp"
         android:layout_height="26dp"
@@ -86,6 +97,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="Coloque un punto en el mapa"
+        android:textColor="@color/md_white_1000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,25 +119,30 @@
 
     <Button
         android:id="@+id/cancelar"
-        android:layout_width="wrap_content"
+        android:layout_width="122dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="56dp"
+        android:background="@drawable/borde"
         android:text="Cancelar"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mapa" />
+        app:layout_constraintTop_toBottomOf="@+id/mapa"
+        app:layout_constraintVertical_bias="0.512" />
 
     <Button
         android:id="@+id/siguiente"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
+        android:background="@drawable/borde"
         android:text="Siguiente"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.609"

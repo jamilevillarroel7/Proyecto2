@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Organizacion.ORG01ListaEventos">
+    tools:context=".Organizacion.ORG01ListaEventos"
+    android:background="@drawable/fondo3">
+
 
     <!--<android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
@@ -25,13 +27,17 @@
         android:layout_marginTop="8dp"
         android:text="Mis eventos"
         android:textAlignment="center"
+        android:textColor="@color/md_white_1000"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnModificar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
+        android:background="@drawable/borde"
+        android:textColor="@color/md_white_1000"
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -39,6 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnModificar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
+
 
         <ImageView
             android:id="@+id/imageView2"
@@ -48,7 +55,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            app:srcCompat="@android:color/holo_red_dark" />
+            android:background="@android:color/darker_gray" />
 
         <TextView
             android:id="@+id/textView3"
@@ -60,6 +67,7 @@
             android:layout_marginTop="14dp"
             android:text="Evento 1"
             android:textAlignment="center"
+            android:textColor="@color/md_white_1000"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -70,7 +78,10 @@
             android:layout_alignEnd="@+id/textView3"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="28dp"
-            android:text="Seleccionar" />
+            android:buttonTint="@android:color/background_light"
+            android:text="Seleccionar"
+            android:textColor="@color/md_white_1000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView4"
@@ -79,7 +90,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/checkBox"
             android:layout_marginTop="56dp"
-            android:text="Fecha: " />
+            android:text="Fecha: "
+            android:textColor="@color/md_white_1000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -88,7 +101,9 @@
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/textView4"
             android:layout_marginEnd="15dp"
-            android:text="dd/mm/yyyy" />
+            android:text="dd/mm/yyyy"
+            android:textColor="@color/md_white_1000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -96,7 +111,9 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/textView4"
             android:layout_centerVertical="true"
-            android:text="Hora:" />
+            android:text="Hora:"
+            android:textColor="@color/md_white_1000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView7"
@@ -105,10 +122,14 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="43dp"
-            android:text="hh:mm" />
+            android:text="hh:mm"
+            android:textColor="@color/md_white_1000"
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <Button
+        android:textColor="@color/md_white_1000"
+        android:background="@drawable/borde"
         android:id="@+id/btnModificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,14 +139,14 @@
         tools:ignore="MissingConstraints" />
 
     <Button
+        android:textColor="@color/md_white_1000"
+        android:background="@drawable/borde"
         android:id="@+id/btnEliminar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
         android:text="Eliminar"
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp" />
 

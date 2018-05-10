@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Cliente.CL02FormularioActivity"
-    android:background="@drawable/backgroundregistro">
+    android:background="@drawable/fondo3">
 
     <EditText
         android:id="@+id/segundaContraseña"
@@ -14,10 +14,11 @@
         android:layout_margin="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:textColorHint="@color/md_white_1000"
         android:background="@drawable/borde"
         android:hint="Confirmar Contraseña"
         android:padding="5dp"
-        android:textColorHint="@color/md_white_1000"
+
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/primeraContraseña"
@@ -89,7 +90,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/fechaNac2"
+        android:id="@+id/fechaNac"
         android:layout_width="183dp"
         android:layout_height="39dp"
         android:layout_margin="30dp"
@@ -101,7 +102,7 @@
         android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/apellidos2"
+        app:layout_constraintStart_toEndOf="@+id/apellidos"
         tools:layout_editor_absoluteY="165dp"
         tools:ignore="MissingConstraints" />
 
@@ -118,11 +119,11 @@
         android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apellidos2"
+        app:layout_constraintTop_toBottomOf="@+id/apellidos"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/apellidos2"
+        android:id="@+id/apellidos"
         android:layout_width="114dp"
         android:layout_height="37dp"
         android:layout_margin="30dp"
@@ -140,7 +141,7 @@
     <EditText
         android:id="@+id/nombres"
         android:layout_width="112dp"
-        android:layout_height="33dp"
+        android:layout_height="31dp"
         android:layout_margin="30dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
@@ -161,8 +162,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
         android:text="EventsApp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@color/md_white_1000"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -170,22 +173,26 @@
 
     <Button
         android:id="@+id/volver"
-        android:layout_width="99dp"
-        android:layout_height="51dp"
+        android:layout_width="129dp"
+        android:layout_height="42dp"
         android:layout_marginBottom="32dp"
         android:layout_marginStart="52dp"
+        android:background="@drawable/borde"
         android:text="Cancelar"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/registrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="123dp"
+        android:layout_height="40dp"
         android:layout_marginBottom="32dp"
         android:layout_marginEnd="64dp"
         android:layout_marginStart="8dp"
+        android:background="@drawable/borde"
         android:text="Registrarse"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.934"
