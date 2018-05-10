@@ -20,11 +20,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/direccion" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/direccion"
+        android:id="@+id/email"
         android:layout_width="310dp"
         android:layout_height="41dp"
         android:layout_marginEnd="8dp"

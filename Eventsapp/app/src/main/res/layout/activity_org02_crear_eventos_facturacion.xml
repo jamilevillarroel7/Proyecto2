@@ -78,7 +78,7 @@
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/correoElectronico"
+        android:id="@+id/email"
         android:layout_width="230dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"

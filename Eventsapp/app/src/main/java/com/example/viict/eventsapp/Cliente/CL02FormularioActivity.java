@@ -17,8 +17,11 @@ public class CL02FormularioActivity extends AppCompatActivity {
 
     private static final String TAG = "";
     private EditText nombres;
+    private EditText telefonoOrg;
     private EditText apellidos;
     private EditText fechaNac;
+    private EditText lugarNac2;
+    private EditText dni;
     private  EditText email;
     private EditText primeraContraseña;
     private EditText segundaContraseña;
@@ -32,9 +35,12 @@ public class CL02FormularioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cl02_formulario);
         nombres= (EditText) findViewById(R.id.nombres);
+        dni= (EditText) findViewById(R.id.dni);
+        lugarNac2= (EditText) findViewById(R.id.lugarNac2);
+        telefonoOrg= (EditText) findViewById(R.id.telefonoOrg);
         apellidos= (EditText) findViewById(R.id.apellidos);
         fechaNac= (EditText) findViewById(R.id.fechaNac);
-        email= (EditText) findViewById(R.id.direccion);
+        email= (EditText) findViewById(R.id.email);
         primeraContraseña= (EditText) findViewById(R.id.primeraContraseña);
         segundaContraseña= (EditText) findViewById(R.id.segundaContraseña);
         registar= (Button) findViewById(R.id.registrar);
@@ -56,6 +62,10 @@ public class CL02FormularioActivity extends AppCompatActivity {
                 String correo = email.getText().toString().trim();
                 String contra1 = primeraContraseña.getText().toString().trim();
                 String contra2 = segundaContraseña.getText().toString().trim();
+                String dnii = dni.getText().toString().trim();
+                String lugarNac = lugarNac2.getText().toString().trim();
+                String telefono = telefonoOrg.getText().toString().trim();
+
 
                 if (nom.length()<=0){
                     Toast.makeText(CL02FormularioActivity.this,"Ingrese su nombre",Toast.LENGTH_SHORT).show();
@@ -83,6 +93,11 @@ public class CL02FormularioActivity extends AppCompatActivity {
                     editor.putString("Correo Electronico",correo);
                     editor.putString("Contraseña",contra1);
                     editor.putString("Confirmar Contraseña",contra2);
+                    editor.putString("DNI",dnii);
+                    editor.putString("Celular",telefono);
+                    editor.putString("Lugar de Nacimiento",lugarNac);
+                    editor.putString("Confirmar Contraseña",contra2);
+
                     editor.commit();
 
                     Toast.makeText(CL02FormularioActivity.this,"Usuario Creado con Exito",Toast.LENGTH_SHORT).show();

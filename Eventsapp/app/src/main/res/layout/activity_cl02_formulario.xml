@@ -14,40 +14,41 @@
         android:layout_margin="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:textColorHint="@color/md_white_1000"
+        android:layout_marginTop="8dp"
         android:background="@drawable/borde"
         android:hint="Confirmar Contraseña"
         android:padding="5dp"
 
+        android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/primeraContraseña"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="430dp" />
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/primeraContraseña"
         android:layout_width="121dp"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/borde"
         android:hint="Contraseña"
         android:padding="5dp"
         android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/direccion"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/direccion"
+        android:id="@+id/email"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/borde"
         android:hint="Correo Electronico"
         android:padding="5dp"
@@ -79,14 +80,16 @@
         android:layout_margin="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/borde"
         android:hint="Lugar de Nacimiento "
         android:padding="5dp"
         android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toEndOf="@+id/dni"
-        tools:layout_editor_absoluteY="232dp"
+        app:layout_constraintTop_toBottomOf="@+id/fechaNac"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -96,6 +99,7 @@
         android:layout_margin="30dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/borde"
         android:hint="Fecha de Nacimiento "
         android:padding="5dp"
@@ -103,7 +107,7 @@
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/apellidos"
-        tools:layout_editor_absoluteY="165dp"
+        app:layout_constraintTop_toBottomOf="@+id/masculino"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -176,27 +180,30 @@
         android:layout_width="129dp"
         android:layout_height="42dp"
         android:layout_marginBottom="32dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/borde"
         android:text="Cancelar"
         android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primeraContraseña"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/registrar"
         android:layout_width="123dp"
         android:layout_height="40dp"
         android:layout_marginBottom="32dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/borde"
         android:text="Registrarse"
         android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
-        app:layout_constraintStart_toEndOf="@+id/volver" />
+        app:layout_constraintTop_toBottomOf="@+id/segundaContraseña"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/sexo"
@@ -217,24 +224,26 @@
         android:layout_height="31dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:buttonTint="@android:color/background_light"
         android:text="Maculino"
         android:textColor="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/femenino3"
-        tools:layout_editor_absoluteY="115dp"
+        app:layout_constraintTop_toBottomOf="@+id/sexo"
         tools:ignore="MissingConstraints" />
 
     <RadioButton
         android:id="@+id/femenino3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:buttonTint="@android:color/background_light"
         android:text="Feminino"
         android:textColor="@color/md_white_1000"
+        app:layout_constraintStart_toEndOf="@+id/nombres"
         app:layout_constraintTop_toBottomOf="@+id/sexo"
-        tools:layout_editor_absoluteX="172dp"
         tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
