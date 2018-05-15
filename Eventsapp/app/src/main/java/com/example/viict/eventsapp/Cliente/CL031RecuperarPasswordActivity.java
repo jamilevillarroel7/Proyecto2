@@ -18,8 +18,8 @@ public class CL031RecuperarPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cl031_recuperar_password);
 
-        recuperar = (Button)findViewById(R.id.recuperar);
-        cancelar = (Button)findViewById(R.id.cancelar);
+        recuperar = (Button)findViewById(R.id.btnRecuperar);
+        cancelar = (Button)findViewById(R.id.btnCancelar);
 
         recuperar.setOnClickListener(new View.OnClickListener() {
             @Override

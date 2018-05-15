@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.viict.eventsapp.R;
 
@@ -19,8 +18,8 @@ public class CL03RecuperarPasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cl03_recuperar_password);
 
-        siguiente = (Button) findViewById(R.id.siguiente);
-        cancelar = (Button) findViewById(R.id.cancelar);
+        siguiente = (Button) findViewById(R.id.btnSiguiente);
+        cancelar = (Button) findViewById(R.id.btnCancelar);
 
         siguiente.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -43,7 +43,8 @@
         <activity android:name=".Organizacion.ORG02CrearEventosCrearEntradaActivity" />
         <activity android:name=".Organizacion.ORGOpciondeMasEnEntradaActivity" />
         <activity android:name=".Organizacion.ORG02CrearEventosFacturacionActivity" />
-        <activity android:name=".Administrador.ADM01RegistrarOrganizacionActivity"></activity>
+        <activity android:name=".Administrador.ADM01RegistrarOrganizacionActivity" />
+        <activity android:name=".Organizacion.ORGLoginActivity"></activity>
     </application>
 
 </manifest>

@@ -33,7 +33,7 @@
         android:textColor="@color/md_white_1000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maxCant" />
+        app:layout_constraintTop_toBottomOf="@+id/spnMaxCant" />
 
     <TextView
         android:id="@+id/titulomaxCant"
@@ -45,7 +45,7 @@
         android:textColor="@color/md_white_1000"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/minCant" />
+        app:layout_constraintTop_toBottomOf="@+id/spnMinCant" />
 
     <TextView
         android:id="@+id/titulominCant"
@@ -61,7 +61,7 @@
 
     <Spinner
         android:textColor="@color/md_white_1000"
-        android:id="@+id/maxCant"
+        android:id="@+id/spnMaxCant"
         android:layout_width="224dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
@@ -71,7 +71,7 @@
 
     <Spinner
         android:textColor="@color/md_white_1000"
-        android:id="@+id/minCant"
+        android:id="@+id/spnMinCant"
         android:layout_width="224dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
@@ -83,7 +83,7 @@
 
         android:textColorHint="@color/md_white_1000"
         android:background="@drawable/borde"
-        android:id="@+id/editText"
+        android:id="@+id/etxtDescrip"
         android:layout_width="326dp"
         android:layout_height="153dp"
         android:layout_marginEnd="8dp"
@@ -98,7 +98,7 @@
     <Button
         android:background="@drawable/borde"
         android:textColor="@color/md_white_1000"
-        android:id="@+id/eliminarEntrada"
+        android:id="@+id/btnEliminarEntrada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
@@ -107,11 +107,11 @@
         android:text="Eliminar Entrada"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/etxtDescrip"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/volver"
+        android:id="@+id/btnVolver"
         android:layout_width="134dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
@@ -123,6 +123,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/eliminarEntrada" />
+        app:layout_constraintStart_toEndOf="@+id/btnEliminarEntrada" />
 
 </android.support.constraint.ConstraintLayout>

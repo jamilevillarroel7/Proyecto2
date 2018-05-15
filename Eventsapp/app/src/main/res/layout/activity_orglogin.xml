@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Organizacion.ORGLoginActivity"
+    android:background="@drawable/fondo4">
+
+    <TextView
+        android:id="@+id/txvWelcome1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="EventsApp"
+        android:textColor="@android:color/white"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etxtCorreo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <EditText
+        android:id="@+id/etxtCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/borde"
+        android:drawableLeft="@drawable/ic_person_white_24dp"
+        android:hint=" Correo Electronico"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/md_white_1000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <EditText
+        android:id="@+id/etxtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borde"
+        android:drawableLeft="@drawable/ic_lock_white_24dp"
+        android:hint="  Contraseña"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:password="true"
+        android:textColorHint="@color/md_white_1000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtCorreo"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp"
+        android:layout_marginBottom="108dp"
+
+        android:layout_marginTop="8dp"
+        android:background="@drawable/borde"
+        android:text="Ingresar"
+        android:textColor="@color/md_white_1000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtPassword"
+        tools:ignore="MissingConstraints" />
+    app:layout_constraintTop_toBottomOf="@+id/recuperarPass"
+
+    </android.support.constraint.ConstraintLayout>

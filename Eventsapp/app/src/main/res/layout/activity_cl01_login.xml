@@ -15,7 +15,7 @@
         android:textColor="@android:color/white"
         android:textSize="40dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/etxtCorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.146" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/etxtCorreo"
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_marginBottom="8dp"
@@ -37,7 +37,7 @@
 
 
         android:textColorHint="@color/md_white_1000"
-        app:layout_constraintBottom_toTopOf="@+id/password2"
+        app:layout_constraintBottom_toTopOf="@+id/etxtPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,7 +45,7 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
-        android:id="@+id/password2"
+        android:id="@+id/etxtPass"
         android:layout_width="match_parent"
         android:layout_height="46dp"
         android:layout_marginBottom="8dp"
@@ -59,14 +59,14 @@
         android:paddingLeft="10dp"
         android:password="true"
         android:textColorHint="@color/md_white_1000"
-        app:layout_constraintBottom_toTopOf="@+id/recuperarPass"
+        app:layout_constraintBottom_toTopOf="@+id/btnRecuperarPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/recuperarPass"
+        android:id="@+id/btnRecuperarPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="188dp"
@@ -74,11 +74,11 @@
         android:text="Olvidé mi contraseña"
         android:textColor="@color/md_white_1000"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -98,7 +98,7 @@
 
 
     <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_button"
+        android:id="@+id/btnFacebook"
         android:layout_width="162dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -108,10 +108,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.771"
-        app:layout_constraintStart_toEndOf="@+id/signInButton" />
+        app:layout_constraintStart_toEndOf="@+id/btnGoogle" />
 
     <com.google.android.gms.common.SignInButton
-        android:id="@+id/signInButton"
+        android:id="@+id/btnGoogle"
         android:layout_width="150dp"
         android:layout_height="34dp"
         android:layout_margin="20dp"
@@ -137,7 +137,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/organizadora"
+        android:id="@+id/txtvIngresoOrg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -148,7 +148,7 @@
         android:textAllCaps="true"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/etxtCorreo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvWelcome1"

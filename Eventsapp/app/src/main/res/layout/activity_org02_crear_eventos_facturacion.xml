@@ -19,7 +19,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreBanco"
+        app:layout_constraintTop_toBottomOf="@+id/etxtNombreBanco"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -31,78 +31,78 @@
         android:layout_marginTop="8dp"
         android:text="Tipo de Documento"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreEmpresa2" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtNombreEmpresa" />
 
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/nombreBanco"
+        android:id="@+id/etxtNombreBanco"
         android:layout_width="163dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:hint="Nombre de Banco"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/spnTipoDoc" />
 
     <EditText
-        android:background="@drawable/borde"
-        android:textColorHint="@color/md_white_1000"
-        android:id="@+id/numeroCuenta"
+        android:id="@+id/etxtNumeroCuenta"
         android:layout_width="163dp"
         android:layout_height="43dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
+        android:background="@drawable/borde"
         android:hint="Numero de Cuenta"
+        android:textColorHint="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toEndOf="@+id/nombreBanco"
-        app:layout_constraintTop_toBottomOf="@+id/numeroDocumento" />
+        app:layout_constraintStart_toEndOf="@+id/etxtNombreBanco"
+        app:layout_constraintTop_toBottomOf="@+id/etxtNumeroDocumento" />
 
     <EditText
-        android:background="@drawable/borde"
-        android:textColorHint="@color/md_white_1000"
-        android:id="@+id/numeroDocumento"
+        android:id="@+id/etxtNumeroDocumento"
         android:layout_width="163dp"
         android:layout_height="40dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
+        android:background="@drawable/borde"
         android:hint="Numero Doc."
+        android:textColorHint="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/spinner2"
-        tools:layout_editor_absoluteY="158dp"
+        app:layout_constraintStart_toEndOf="@+id/spnTipoDoc"
+        app:layout_constraintTop_toBottomOf="@+id/tituloTipoDocumento"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:background="@drawable/borde"
-        android:textColorHint="@color/md_white_1000"
-        android:id="@+id/email"
+        android:id="@+id/etxtCorreo"
         android:layout_width="230dp"
         android:layout_height="39dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/borde"
         android:hint="Correo Electronico"
+        android:textColorHint="@color/md_white_1000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numeroCelular2" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtNumeroCelular" />
 
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/numeroCelular2"
+        android:id="@+id/etxtNumeroCelular"
         android:layout_width="230dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:hint="Numero de Celular"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreContacto2" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtNombreContacto" />
 
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/nombreContacto2"
+        android:id="@+id/etxtNombreContacto"
         android:layout_width="230dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
@@ -113,7 +113,7 @@
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/nombreEmpresa2"
+        android:id="@+id/etxtNombreEmpresa"
         android:layout_width="230dp"
         android:layout_height="39dp"
         android:layout_marginStart="16dp"
@@ -154,7 +154,7 @@
 
     <Spinner
         android:textColor="@color/md_white_1000"
-        android:id="@+id/spinner2"
+        android:id="@+id/spnTipoDoc"
         android:layout_width="156dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
@@ -163,30 +163,34 @@
         app:layout_constraintTop_toBottomOf="@+id/tituloTipoDocumento" />
 
     <Button
-        android:id="@+id/cancelar"
+        android:id="@+id/btnCancelar"
         android:layout_width="137dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/borde"
         android:text="Cancelar"
         android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtCorreo" />
 
     <Button
-        android:id="@+id/publicarEvento"
+        android:id="@+id/btnPublicarEvento"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/borde"
         android:text="Publicar Evento"
         android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.854"
-        app:layout_constraintStart_toEndOf="@+id/cancelar" />
+        app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+        app:layout_constraintTop_toBottomOf="@+id/etxtCorreo" />
 
 </android.support.constraint.ConstraintLayout>

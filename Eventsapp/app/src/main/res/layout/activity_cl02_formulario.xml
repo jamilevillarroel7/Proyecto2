@@ -8,7 +8,7 @@
     android:background="@drawable/fondo3">
 
     <EditText
-        android:id="@+id/segundaContraseña"
+        android:id="@+id/etxtSegundaContraseña"
         android:layout_width="188dp"
         android:layout_height="38dp"
         android:layout_margin="30dp"
@@ -16,65 +16,76 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/borde"
+
         android:hint="Confirmar Contraseña"
         android:padding="5dp"
-
         android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/primeraContraseña"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintStart_toEndOf="@+id/etxtPrimeraContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/etxtCorreoElec"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/primeraContraseña"
+        android:id="@+id/etxtCorreoElec"
+        android:layout_width="171dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/borde"
+        android:hint="Correo Electronico"
+        android:textColorHint="@color/md_white_1000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtNumCel"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etxtDirec"
+        android:layout_width="171dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/borde"
+        android:hint="Direccion"
+        android:textColorHint="@color/md_white_1000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etxtNumCel"
+        app:layout_constraintTop_toBottomOf="@+id/etxtLugNac"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etxtNumCel"
+        android:layout_width="140dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/borde"
+        android:hint="Celular"
+        android:textColorHint="@color/md_white_1000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtDNI"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etxtPrimeraContraseña"
         android:layout_width="121dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="30dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/borde"
         android:hint="Contraseña"
         android:padding="5dp"
         android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/etxtCorreoElec"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="172dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/borde"
-        android:hint="Correo Electronico"
-        android:padding="5dp"
-        android:textColorHint="@color/md_white_1000"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefonoOrg"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/telefonoOrg"
-        android:layout_width="137dp"
-        android:layout_height="33dp"
-        android:layout_margin="30dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/borde"
-        android:hint="Celular"
-        android:padding="5dp"
-        android:textColorHint="@color/md_white_1000"
-        android:textSize="18dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dni" />
-
-    <EditText
-        android:id="@+id/lugarNac2"
+        android:id="@+id/etxtLugNac"
         android:layout_width="177dp"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -88,12 +99,12 @@
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toEndOf="@+id/dni"
-        app:layout_constraintTop_toBottomOf="@+id/fechaNac"
+        app:layout_constraintStart_toEndOf="@+id/etxtDNI"
+        app:layout_constraintTop_toBottomOf="@+id/etxtFechaNac"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/fechaNac"
+        android:id="@+id/etxtFechaNac"
         android:layout_width="183dp"
         android:layout_height="39dp"
         android:layout_margin="30dp"
@@ -106,28 +117,28 @@
         android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/apellidos"
-        app:layout_constraintTop_toBottomOf="@+id/masculino"
+        app:layout_constraintStart_toEndOf="@+id/etxtApe"
+        app:layout_constraintTop_toBottomOf="@+id/rbtnMasculino"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/dni"
+        android:id="@+id/etxtDNI"
         android:layout_width="114dp"
         android:layout_height="40dp"
         android:layout_margin="30dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/borde"
         android:hint="DNI"
         android:padding="5dp"
         android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apellidos"
+        app:layout_constraintTop_toBottomOf="@+id/etxtApe"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/apellidos"
+        android:id="@+id/etxtApe"
         android:layout_width="114dp"
         android:layout_height="37dp"
         android:layout_margin="30dp"
@@ -139,16 +150,16 @@
         android:textColorHint="@color/md_white_1000"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombres"
+        app:layout_constraintTop_toBottomOf="@+id/etxtNom"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/nombres"
+        android:id="@+id/etxtNom"
         android:layout_width="112dp"
         android:layout_height="31dp"
         android:layout_margin="30dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/borde"
         android:hint="Nombres"
         android:padding="5dp"
@@ -164,7 +175,7 @@
         android:layout_height="44dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="EventsApp"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@color/md_white_1000"
@@ -176,22 +187,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/volver"
+        android:id="@+id/btnCancelar"
         android:layout_width="129dp"
         android:layout_height="42dp"
         android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/borde"
         android:text="Cancelar"
         android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegistrar"
+        app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/primeraContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/etxtPrimeraContraseña"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/registrar"
+        android:id="@+id/btnRegistrar"
         android:layout_width="123dp"
         android:layout_height="40dp"
         android:layout_marginBottom="32dp"
@@ -202,7 +216,7 @@
         android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/segundaContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/etxtSegundaContraseña"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -219,7 +233,7 @@
         tools:ignore="MissingConstraints" />
 
     <RadioButton
-        android:id="@+id/masculino"
+        android:id="@+id/rbtnMasculino"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
         android:layout_marginEnd="8dp"
@@ -229,12 +243,12 @@
         android:text="Maculino"
         android:textColor="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/femenino3"
+        app:layout_constraintStart_toEndOf="@+id/rbtnFemenino"
         app:layout_constraintTop_toBottomOf="@+id/sexo"
         tools:ignore="MissingConstraints" />
 
     <RadioButton
-        android:id="@+id/femenino3"
+        android:id="@+id/rbtnFemenino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -242,7 +256,7 @@
         android:buttonTint="@android:color/background_light"
         android:text="Feminino"
         android:textColor="@color/md_white_1000"
-        app:layout_constraintStart_toEndOf="@+id/nombres"
+        app:layout_constraintStart_toEndOf="@+id/etxtNom"
         app:layout_constraintTop_toBottomOf="@+id/sexo"
         tools:ignore="MissingConstraints" />
 

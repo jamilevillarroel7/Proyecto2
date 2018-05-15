@@ -22,4 +22,8 @@
     <string name="restricciones">Restricciones</string>
     <string name="menores_de_edad_acompa_ados_con_adulto">Menores de edad,acompañados con adulto</string>
     <string name="ingrese_contrase_a_nueva">Ingrese contraseña nueva</string>
+    <string name="nombre_de_la_entrada">Nombre de la entrada</string>
+    <string name="direccion">Direccion</string>
+    <string name="banco_afiliado">Banco Afiliado</string>
+    <string name="telefono">Telefono</string>
 </resources>

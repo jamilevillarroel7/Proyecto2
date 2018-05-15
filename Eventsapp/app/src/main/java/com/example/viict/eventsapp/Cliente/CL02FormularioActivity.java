@@ -34,18 +34,19 @@ public class CL02FormularioActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cl02_formulario);
-        nombres= (EditText) findViewById(R.id.nombres);
-        dni= (EditText) findViewById(R.id.dni);
-        lugarNac2= (EditText) findViewById(R.id.lugarNac2);
-        telefonoOrg= (EditText) findViewById(R.id.telefonoOrg);
-        apellidos= (EditText) findViewById(R.id.apellidos);
-        fechaNac= (EditText) findViewById(R.id.fechaNac);
-        email= (EditText) findViewById(R.id.email);
-        primeraContraseña= (EditText) findViewById(R.id.primeraContraseña);
-        segundaContraseña= (EditText) findViewById(R.id.segundaContraseña);
-        registar= (Button) findViewById(R.id.registrar);
-        volver = (Button) findViewById(R.id.volver);
+        nombres= (EditText) findViewById(R.id.etxtNom);
+        dni= (EditText) findViewById(R.id.etxtDNI);
+        lugarNac2= (EditText) findViewById(R.id.etxtLugNac);
+        telefonoOrg= (EditText) findViewById(R.id.etxTel);
+        apellidos= (EditText) findViewById(R.id.etxtApe);
+        fechaNac= (EditText) findViewById(R.id.etxtFechaNac);
+        email= (EditText) findViewById(R.id.etxtCorreo);
+        primeraContraseña= (EditText) findViewById(R.id.etxtPrimeraContraseña);
+        segundaContraseña= (EditText) findViewById(R.id.etxtSegundaContraseña);
+        registar= (Button) findViewById(R.id.btnRegistrar);
+        volver = (Button) findViewById(R.id.btnVolver);
         events1 = (TextView) findViewById(R.id.events1);
+
 
         Typeface fuente = Typeface.createFromAsset(getAssets(),"fonts/Magettas Regular.otf");
         events1.setTypeface(fuente);

@@ -78,7 +78,7 @@
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/desdeHora"
+        android:id="@+id/etxtDesdeHora"
         android:layout_width="63dp"
         android:layout_height="20dp"
         android:layout_marginStart="76dp"
@@ -91,7 +91,7 @@
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/hastaHora"
+        android:id="@+id/etxtHastaHora"
         android:layout_width="69dp"
         android:layout_height="19dp"
         android:layout_marginEnd="8dp"
@@ -100,11 +100,11 @@
         android:ems="10"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/desdeHora"
+        app:layout_constraintStart_toEndOf="@+id/etxtDesdeHora"
         app:layout_constraintTop_toBottomOf="@+id/hasta" />
 
     <Button
-        android:id="@+id/agregarHorario"
+        android:id="@+id/btnAgregarHorario"
         android:layout_width="169dp"
         android:layout_height="36dp"
         android:layout_marginEnd="16dp"
@@ -114,10 +114,10 @@
         android:textColor="@color/md_white_1000"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hastaHora" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtHastaHora" />
 
     <Button
-        android:id="@+id/cancelar"
+        android:id="@+id/btnCancelar"
         android:layout_width="116dp"
         android:layout_height="37dp"
         android:layout_marginBottom="16dp"
@@ -129,7 +129,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/agregar"
+        android:id="@+id/btnAgregar"
         android:layout_width="116dp"
         android:layout_height="37dp"
         android:layout_marginBottom="8dp"
@@ -142,8 +142,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toEndOf="@+id/cancelar"
-        app:layout_constraintTop_toBottomOf="@+id/agregarHorario"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregarHorario"
         app:layout_constraintVertical_bias="0.2" />
 
 </android.support.constraint.ConstraintLayout>

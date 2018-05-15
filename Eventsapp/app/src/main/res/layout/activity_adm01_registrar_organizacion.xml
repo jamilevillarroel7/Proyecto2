@@ -10,7 +10,7 @@
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/nombreOrganizacion"
+        android:id="@+id/etxNomOrg"
         android:layout_width="225dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
@@ -23,79 +23,82 @@
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/dniRepresentante"
+        android:id="@+id/etxDniRepre"
         android:layout_width="225dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:hint="DNI del Representante"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numeroTarjeta"
+        app:layout_constraintTop_toBottomOf="@+id/etxNumTarj"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/numeroRuc"
+        android:id="@+id/etxNumRUC"
         android:layout_width="225dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:hint="RUC"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreOrganizacion"
+        app:layout_constraintTop_toBottomOf="@+id/etxNomOrg"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/telefonoOrg"
+        android:id="@+id/etxTel"
         android:layout_width="225dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:hint="Telefono"
+        android:hint="@string/telefono"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtCorreo"
+        tools:ignore="MissingConstraints"
+        android:inputType="" />
 
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/email"
+        android:id="@+id/etxtCorreo"
         android:layout_width="225dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:hint="Direccion"
+        android:hint="@string/direccion"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numeroRuc"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/etxNumRUC"
+        tools:ignore="MissingConstraints"
+        android:inputType="" />
 
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/bancoAfiliado"
+        android:id="@+id/etxBancAfil"
         android:layout_width="225dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:hint="Banco Afiliado"
+        android:hint="@string/banco_afiliado"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefonoOrg"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/etxTel"
+        tools:ignore="MissingConstraints"
+        android:inputType="" />
 
     <EditText
         android:background="@drawable/borde"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/numeroTarjeta"
+        android:id="@+id/etxNumTarj"
         android:layout_width="225dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:hint="Numero de Tarjeta"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bancoAfiliado"
+        app:layout_constraintTop_toBottomOf="@+id/etxBancAfil"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -123,13 +126,13 @@
         android:text="Imagen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.222"
-        app:layout_constraintStart_toEndOf="@+id/nombreOrganizacion"
+        app:layout_constraintStart_toEndOf="@+id/etxNomOrg"
         tools:layout_editor_absoluteY="79dp"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/imagen"
+        android:id="@+id/imgvFotoOrg"
         android:layout_width="78dp"
         android:layout_height="82dp"
         android:layout_marginEnd="36dp"
@@ -141,17 +144,17 @@
     <Button
         android:background="@drawable/borde"
         android:textColor="@color/md_white_1000"
-        android:id="@+id/cargar"
+        android:id="@+id/btnCargar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
         android:layout_marginTop="28dp"
         android:text="cargar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagen" />
+        app:layout_constraintTop_toBottomOf="@+id/imgvFotoOrg" />
 
     <Button
-        android:id="@+id/cancelar"
+        android:id="@+id/btnCancelar"
         android:layout_width="131dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -162,10 +165,10 @@
         android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dniRepresentante" />
+        app:layout_constraintTop_toBottomOf="@+id/etxDniRepre" />
 
     <Button
-        android:id="@+id/registrar"
+        android:id="@+id/btnRegistrar"
         android:layout_width="121dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -178,7 +181,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toEndOf="@+id/cancelar"
-        app:layout_constraintTop_toBottomOf="@+id/dniRepresentante" />
+        app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+        app:layout_constraintTop_toBottomOf="@+id/etxDniRepre" />
 
 </android.support.constraint.ConstraintLayout>

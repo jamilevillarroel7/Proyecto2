@@ -8,42 +8,45 @@
     tools:context=".Organizacion.ORG02CrearEventosUbicacionActivity">
 
     <EditText
-        android:background="@drawable/borde"
-        android:textColorHint="@color/md_white_1000"
-        android:id="@+id/referencia"
+        android:id="@+id/etxtReferencia"
         android:layout_width="309dp"
         android:layout_height="46dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:hint="Referencia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
-    <EditText
+        android:layout_marginTop="28dp"
         android:background="@drawable/borde"
+        android:hint="Referencia"
         android:textColorHint="@color/md_white_1000"
-        android:id="@+id/email"
-        android:layout_width="310dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:hint="Direccion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ciudadDi" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtCorreo"
+        tools:ignore="MissingConstraints" />
 
+    <EditText
+        android:id="@+id/etxtCorreo"
+        android:layout_width="309dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/borde"
+        android:hint="Direccion"
+        android:textColorHint="@color/md_white_1000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ciudad"
+        tools:ignore="MissingConstraints" />
     <Spinner
-        android:textColor="@color/md_white_1000"
-        android:id="@+id/ciudadDi"
+        android:id="@+id/spnCiudadDi"
         android:layout_width="126dp"
         android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/md_white_1000"
+        app:layout_constraintTop_toBottomOf="@+id/ubicacion"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="91dp"></Spinner>
+        tools:layout_editor_absoluteX="112dp"></Spinner>
 
     <TextView
         android:id="@+id/tituloCrearEvento"
@@ -83,7 +86,7 @@
         android:layout_marginTop="12dp"
         android:text="Ciudad"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/ciudadDi"
+        app:layout_constraintEnd_toStartOf="@+id/spnCiudadDi"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ubicacion"
@@ -103,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/referencia" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtReferencia" />
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapa"
@@ -118,7 +121,7 @@
         app:layout_constraintTop_toBottomOf="@+id/mapaTitulo" />
 
     <Button
-        android:id="@+id/cancelar"
+        android:id="@+id/btnCancelar"
         android:layout_width="122dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -133,7 +136,7 @@
         app:layout_constraintVertical_bias="0.512" />
 
     <Button
-        android:id="@+id/siguiente"
+        android:id="@+id/btnSiguiente"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -146,7 +149,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toEndOf="@+id/cancelar"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelar"
         app:layout_constraintTop_toBottomOf="@+id/mapa" />
 
 </android.support.constraint.ConstraintLayout>

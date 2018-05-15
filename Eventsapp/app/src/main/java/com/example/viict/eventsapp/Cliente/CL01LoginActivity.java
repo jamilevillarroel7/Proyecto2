@@ -1,5 +1,6 @@
 package com.example.viict.eventsapp.Cliente;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
@@ -12,6 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.viict.eventsapp.Organizacion.ORG02CrearEventosDatosActivity;
+import com.example.viict.eventsapp.Organizacion.ORGLoginActivity;
 import com.example.viict.eventsapp.R;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -42,13 +45,14 @@ public class CL01LoginActivity extends AppCompatActivity implements GoogleApiCli
     private static final String TAG ="";
 
     //INTERFAZ
-    private TextView txvWelcome1;
+    private TextView txvWelcome1,organizadoraa;
     private EditText emailField, passwordField;
     private Button btnLogin;
     private LoginButton lbFacebook;
     private SignInButton signInButton;
     private TextView nuevoUsr;
     private Button recuperarPass, btnRegistrar;
+
 
     //FIREBASE
     private FirebaseAuth mAuth;
@@ -61,24 +65,32 @@ public class CL01LoginActivity extends AppCompatActivity implements GoogleApiCli
     private GoogleApiClient googleApiClient;
     public static final int SIGN_IN_CODE=777;
 
+    @SuppressLint("WrongViewCast")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_cl01_login);
 
         //CONEXION ENTRE INTERFAZ Y VARIABLES
-        emailField = (EditText) findViewById(R.id.email);
-        passwordField = (EditText) findViewById(R.id.password2);
-        btnLogin = (Button) findViewById(R.id.login);
-        lbFacebook = (LoginButton) findViewById(R.id.login_button);
-        signInButton = (SignInButton) findViewById(R.id.signInButton);
-        recuperarPass = (Button) findViewById(R.id.recuperarPass) ;
+        organizadoraa = (TextView) findViewById(R.id.txtvIngresoOrg);
+        emailField = (EditText) findViewById(R.id.etxtCorreo);
+        passwordField = (EditText) findViewById(R.id.etxtPass);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
+        lbFacebook = (LoginButton) findViewById(R.id.btnFacebook);
+        signInButton = (SignInButton) findViewById(R.id.btnGoogle);
+        recuperarPass = (Button) findViewById(R.id.btnRecuperarPass) ;
         txvWelcome1 = (TextView) findViewById(R.id.txvWelcome1);
         btnRegistrar = (Button) findViewById(R.id.btnRegistrar);
 
         Typeface fuente = Typeface.createFromAsset(getAssets(),"fonts/Magettas Regular.otf");
         txvWelcome1.setTypeface(fuente);
-
+        //Organnizadora
+        organizadoraa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(CL01LoginActivity.this, ORGLoginActivity.class));
+            }
+        });
 
         //INSTANCIA LA CONEXION CON FIREBASE
         mAuth = FirebaseAuth.getInstance();
@@ -103,7 +115,7 @@ public class CL01LoginActivity extends AppCompatActivity implements GoogleApiCli
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser()!= null){
-                    startActivity(new Intent(CL01LoginActivity.this, CL04PrincipalClienteActivity.class));
+                    startActivity(new Intent(CL01LoginActivity.this, ORG02CrearEventosDatosActivity.class));
                 }
             }
         };
