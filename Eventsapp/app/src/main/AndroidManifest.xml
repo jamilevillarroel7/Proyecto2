@@ -49,7 +49,9 @@
         <activity android:name=".Cliente.CL06ListadeEventosDetalleActivity" />
         <activity android:name=".Cliente.CL07ListadeOrganizacionesActivity" />
         <activity android:name=".Cliente.CL08RecordarEventoActivity" />
-        <activity android:name=".Cliente.CL09RecordatoriosActivity"></activity>
+        <activity android:name=".Cliente.CL09RecordatoriosActivity" />
+        <activity android:name=".org_detalleOrganizacion" />
+        <activity android:name=".cl_carritoCompra"></activity>
     </application>
 
 </manifest>

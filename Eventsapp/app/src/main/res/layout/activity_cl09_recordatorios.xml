@@ -63,7 +63,7 @@
 
         <TextView
             android:textColor="@color/md_white_1000"
-            android:id="@+id/textView20"
+            android:id="@+id/txvPrecio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
@@ -81,7 +81,7 @@
             android:layout_marginTop="8dp"
             android:text="Hora:"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+            app:layout_constraintTop_toBottomOf="@+id/txvPrecio" />
 
         <TextView
             android:textColor="@color/md_white_1000"
@@ -92,7 +92,7 @@
             android:layout_marginStart="8dp"
             android:text="Fecha"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView20"
+            app:layout_constraintStart_toEndOf="@+id/txvPrecio"
             tools:layout_editor_absoluteY="76dp" />
 
         <TextView

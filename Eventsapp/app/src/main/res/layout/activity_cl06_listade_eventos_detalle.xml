@@ -114,7 +114,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txtTipoEvento" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/txvTipoEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -130,7 +130,7 @@
             android:layout_marginStart="16dp"
             android:text="Fecha y Hora"
             android:textColor="@color/md_white_1000"
-            app:layout_constraintStart_toEndOf="@+id/textView19"
+            app:layout_constraintStart_toEndOf="@+id/txvTipoEvento"
             tools:layout_editor_absoluteY="185dp" />
 
         <TextView
@@ -142,7 +142,7 @@
             android:text="Entradas:"
             android:textColor="@color/md_white_1000"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+            app:layout_constraintTop_toBottomOf="@+id/txvTipoEvento" />
 
         <TableLayout
             android:id="@+id/tableLayout"
