@@ -46,7 +46,10 @@
         <activity android:name=".Administrador.ADM01RegistrarOrganizacionActivity" />
         <activity android:name=".Organizacion.ORGLoginActivity" />
         <activity android:name=".Cliente.CL05ListaEventosActivity" />
-        <activity android:name=".Cliente.CL06ListadeEventosDetalleActivity"></activity>
+        <activity android:name=".Cliente.CL06ListadeEventosDetalleActivity" />
+        <activity android:name=".Cliente.CL07ListadeOrganizacionesActivity" />
+        <activity android:name=".Cliente.CL08RecordarEventoActivity" />
+        <activity android:name=".Cliente.CL09RecordatoriosActivity"></activity>
     </application>
 
 </manifest>
