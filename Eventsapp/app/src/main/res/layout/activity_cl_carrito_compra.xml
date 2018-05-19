@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".cl_carritoCompra">
+    android:background="@drawable/fondo3"
+    tools:context=".Cliente.cl_carritoCompra">
 
     <TextView
+        android:textColor="@color/md_white_1000"
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,9 +17,11 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="75dp" />
+        tools:layout_editor_absoluteX="75dp"
+        tools:ignore="MissingConstraints" />
 
     <android.support.constraint.ConstraintLayout
+        android:background="@drawable/borde"
         android:id="@+id/linearLayout"
         android:layout_width="344dp"
         android:layout_height="224dp"
@@ -30,12 +34,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12">
 
         <ImageView
+            android:textColor="@color/md_white_1000"
             android:id="@+id/imageView4"
             android:layout_width="134dp"
             android:layout_height="230dp"
-            app:srcCompat="@android:color/black"
+            app:srcCompat="@android:color/darker_gray"
             tools:layout_editor_absoluteX="-1dp"
-            tools:layout_editor_absoluteY="-9dp" />
+            tools:layout_editor_absoluteY="-9dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/txvEvento"
@@ -45,73 +51,93 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Nombre de Evento"
+            android:textColor="@color/md_white_1000"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:textColor="@color/md_white_1000"
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tipo de evento"
             tools:layout_editor_absoluteX="146dp"
-            tools:layout_editor_absoluteY="39dp" />
+            tools:layout_editor_absoluteY="39dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
+            android:textColor="@color/md_white_1000"
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Precio"
             tools:layout_editor_absoluteX="146dp"
-            tools:layout_editor_absoluteY="68dp" />
+            tools:layout_editor_absoluteY="68dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
+            android:textColor="@color/md_white_1000"
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cantidad"
             tools:layout_editor_absoluteX="146dp"
-            tools:layout_editor_absoluteY="95dp" />
+            tools:layout_editor_absoluteY="95dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
+            android:textColor="@color/md_white_1000"
             android:id="@+id/txvTipoEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Concierto"
             tools:layout_editor_absoluteX="249dp"
-            tools:layout_editor_absoluteY="39dp" />
+            tools:layout_editor_absoluteY="39dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
+            android:textColor="@color/md_white_1000"
             android:id="@+id/txvPrecio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20 soles"
             tools:layout_editor_absoluteX="249dp"
-            tools:layout_editor_absoluteY="68dp" />
+            tools:layout_editor_absoluteY="68dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
+            android:textColor="@color/md_white_1000"
             android:id="@+id/txvCantidad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2 unidades"
             tools:layout_editor_absoluteX="249dp"
-            tools:layout_editor_absoluteY="95dp" />
+            tools:layout_editor_absoluteY="95dp"
+            tools:ignore="MissingConstraints" />
 
         <CheckBox
+            android:textColor="@color/md_white_1000"
             android:id="@+id/checkBox2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@android:color/background_light"
             android:text="Seleccionar"
             tools:layout_editor_absoluteX="146dp"
-            tools:layout_editor_absoluteY="125dp" />
+            tools:layout_editor_absoluteY="125dp"
+            tools:ignore="MissingConstraints" />
 
         <Button
+            android:textColor="@color/md_white_1000"
+            android:background="@drawable/borde"
             android:id="@+id/btnEliminar"
             android:layout_width="185dp"
             android:layout_height="35dp"
             android:text="Eliminar"
             tools:layout_editor_absoluteX="142dp"
-            tools:layout_editor_absoluteY="170dp" />
+            tools:layout_editor_absoluteY="170dp"
+            tools:ignore="MissingConstraints" />
     </android.support.constraint.ConstraintLayout>
 
     <Button
@@ -121,9 +147,41 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/borde"
         android:text="PAGAR"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView44"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:textColor="@color/md_white_1000"
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="Total:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/txtMontoTotal"
+        tools:layout_editor_absoluteY="454dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="@color/md_white_1000"
+        android:id="@+id/txtMontoTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="$$$"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="454dp"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

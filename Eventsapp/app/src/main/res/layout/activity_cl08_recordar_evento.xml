@@ -25,12 +25,12 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:textColor="@color/md_white_1000"
             android:id="@+id/txvNomOrg"
-            android:layout_width="176dp"
+            android:layout_width="205dp"
             android:layout_height="33dp"
             android:layout_marginTop="4dp"
-            android:text="Recordar"
+            android:text="Recordar Eventos"
+            android:textColor="@color/md_white_1000"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

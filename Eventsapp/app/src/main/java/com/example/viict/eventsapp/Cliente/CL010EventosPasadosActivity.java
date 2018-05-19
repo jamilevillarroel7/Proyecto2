@@ -5,11 +5,12 @@ import android.os.Bundle;
 
 import com.example.viict.eventsapp.R;
 
-public class CL06ListadeEventosDetalleActivity extends AppCompatActivity {
+public class CL010EventosPasadosActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cl06_eventos_detalle);
+        setContentView(R.layout.activity_cl010_eventos_pasados);
+        //ltecnologia e investigacion
     }
 }

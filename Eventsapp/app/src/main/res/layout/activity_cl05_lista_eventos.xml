@@ -7,31 +7,15 @@
     android:background="@drawable/fondo3"
     tools:context=".Cliente.CL05ListaEventosActivity">
 
-    <EditText
-        android:id="@+id/etxtBuscar"
-        android:layout_width="227dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/borde"
-        android:hint="Buscar"
-        android:textColorHint="@color/md_white_1000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="49dp" />
-
     <Spinner
 
         android:id="@+id/spnCategoria"
         android:layout_width="127dp"
         android:layout_height="34dp"
-        android:layout_marginEnd="4dp"
         android:layout_marginStart="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/etxtBuscar"
-        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="52dp" />
+        tools:layout_editor_absoluteY="65dp" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/rgFiltros"
@@ -39,11 +23,11 @@
         android:layout_height="34dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtBuscar"
+        app:layout_constraintTop_toBottomOf="@+id/swBuscar"
         tools:ignore="MissingConstraints">
 
         <RadioButton
@@ -210,5 +194,32 @@
             tools:layout_editor_absoluteX="180dp"
             tools:layout_editor_absoluteY="138dp" />
     </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Lista de Eventos"
+        android:textColor="@color/md_white_1000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/swBuscar"
+        android:layout_width="227dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spnCategoria"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
 </android.support.constraint.ConstraintLayout>

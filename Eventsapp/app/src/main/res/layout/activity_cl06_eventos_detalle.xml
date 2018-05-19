@@ -9,7 +9,7 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="361dp"
+        android:layout_width="368dp"
         android:layout_height="537dp"
         android:background="@drawable/borde"
         tools:ignore="MissingConstraints"
@@ -27,8 +27,8 @@
 
         <TextView
             android:id="@+id/txtNomAct"
-            android:layout_width="368dp"
-            android:layout_height="wrap_content"
+            android:layout_width="361dp"
+            android:layout_height="25dp"
             android:text="Nombre del evento y/o Actividad"
             android:textAlignment="center"
             android:textColor="@color/md_white_1000"

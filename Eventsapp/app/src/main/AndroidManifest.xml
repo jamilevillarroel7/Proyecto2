@@ -50,8 +50,11 @@
         <activity android:name=".Cliente.CL07ListadeOrganizacionesActivity" />
         <activity android:name=".Cliente.CL08RecordarEventoActivity" />
         <activity android:name=".Cliente.CL09RecordatoriosActivity" />
-        <activity android:name=".org_detalleOrganizacion" />
-        <activity android:name=".cl_carritoCompra"></activity>
+        <activity android:name=".Organizacion.org_detalleOrganizacion" />
+        <activity android:name=".Cliente.cl_carritoCompra" />
+        <activity android:name=".Cliente.CL010EventosPasadosActivity" />
+        <activity android:name=".Organizacion.ORG03VerMasEventoActivity" />
+        <activity android:name=".Cliente.CL011CarritodeCompraCompletaDatos"></activity>
     </application>
 
 </manifest>

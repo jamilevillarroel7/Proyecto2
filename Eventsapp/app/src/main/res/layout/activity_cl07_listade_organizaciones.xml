@@ -12,10 +12,10 @@
         android:layout_width="199dp"
         android:layout_height="183dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/borde"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView35"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -59,4 +59,18 @@
             app:srcCompat="@android:color/darker_gray" />
 
     </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:textColor="@color/md_white_1000"
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Organizaciones"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo3"
+    tools:context=".Cliente.CL010EventosPasadosActivity">
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Eventos Pasados"
+        android:textColor="@color/md_white_1000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:background="@drawable/borde"
+        android:id="@+id/linearLayout5"
+        android:layout_width="351dp"
+        android:layout_height="183dp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="70dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:textColor="@color/md_white_1000"
+            android:id="@+id/txtNomEvento"
+            android:layout_width="184dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Nombre del Evento"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="137dp"
+            android:layout_height="109dp"
+            app:srcCompat="@android:color/darker_gray"
+            tools:layout_editor_absoluteX="7dp"
+            tools:layout_editor_absoluteY="57dp" />
+
+        <TextView
+            android:textColor="@color/md_white_1000"
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valoracion:"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="49dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar3"
+            android:layout_width="186dp"
+            android:layout_height="62dp"
+            tools:layout_editor_absoluteX="149dp"
+            tools:layout_editor_absoluteY="81dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:textColor="@color/md_white_1000"
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comentarios:"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="267dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="46dp"
+        android:layout_height="52dp"
+        app:srcCompat="@android:color/darker_gray"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="340dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="@color/md_white_1000"
+        android:id="@+id/txtUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="311dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="@color/md_white_1000"
+        android:background="@drawable/borde"
+        android:id="@+id/txtComentario"
+        android:layout_width="261dp"
+        android:layout_height="52dp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="340dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>

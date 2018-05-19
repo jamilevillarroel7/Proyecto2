@@ -1,7 +1,9 @@
-package com.example.viict.eventsapp;
+package com.example.viict.eventsapp.Cliente;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.viict.eventsapp.R;
 
 public class cl_carritoCompra extends AppCompatActivity {
 
